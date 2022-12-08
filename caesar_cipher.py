@@ -7,7 +7,9 @@ import sys
 # " The Caesar cipher is based on transposition and involves shifting each letter of the plaintext message by a certain number of letters, historically three, as shown in Figure 5.1. 
 # The ciphertext can be decrypted by applying the same number of shifts in the opposite direction. " (https://www.sciencedirect.com/topics/computer-science/caesar-cipher)
 
-# FIXME:fix white space as input...currently cannot do string such as "hello world"
+# FIXME:fix white space as input...currently cannot do string such as "hello world"...can only take in 1 string, not two
+#       will need to split string, encode/decode two strings, join strings back together when returning or printing final 
+#       encoded/decoded text
 
 ############################################################################################
 # Global variables
@@ -92,7 +94,9 @@ def caesar(start_text, shift_amount, cipher_direction):
 
 ############################################################################################
 # automated loop for continuous use unless specified otherwise
-# FIXME:fix white space as input...currently cannot do string such as "hello world"
+# FIXME:fix white space as input...currently cannot do string such as "hello world"...can only take in 1 string, not two
+#       will need to split string, encode/decode two strings, join strings back together when returning or printing final 
+#       encoded/decoded text
 run = True
 while (run):
   
