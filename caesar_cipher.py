@@ -9,7 +9,7 @@ import sys
 
 # FIXME:fix white space as input...currently cannot do string such as "hello world"...can only take in 1 string, not two
 #       will need to split string, encode/decode two strings, join strings back together when returning or printing final 
-#       encoded/decoded text
+#       encoded/decoded text --> FIXED!!! (12/07/22)
 
 ############################################################################################
 # Global variables
@@ -72,31 +72,29 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 def caesar(start_text, shift_amount, cipher_direction):
   new_string = ""
   alph_len = len(alphabet)  # len of alphabet = 26
+
+  # update: 12/07/22
+  #        only variable that needs to change is cipher direction & shift 
+  #            amount which is negative --> needed for modulo
+  #        everything else should remain the same in order to avoid 
+  #            repetition. Encode and decode are pretty much the same
+  if cipher_direction == "decode":
+    shift_amount *= -1
   for i in start_text:
-    orig_pos = alphabet.index(i)
-    if cipher_direction == "decode":
-      new_position = orig_pos - shift_amount
-      if (new_position < 0):
-        new_letter = alphabet[new_position % alph_len]
-        new_string += new_letter
-      else:
-        new_letter = alphabet[new_position]
-        new_string += new_letter
-    else:
+    if i in alphabet:
+      orig_pos = alphabet.index(i)
       new_position = orig_pos + shift_amount
-      if(new_position > alph_len):
-        new_letter = alphabet[new_position % alph_len]
-        new_string += new_letter
-      else:
-        new_letter = alphabet[new_position]
-        new_string += new_letter
+      new_letter = alphabet[new_position % alph_len]
+      new_string += new_letter
+    else:
+      new_string += i
   print(f"The {cipher_direction}d text is {new_string}")
 
 ############################################################################################
 # automated loop for continuous use unless specified otherwise
 # FIXME:fix white space as input...currently cannot do string such as "hello world"...can only take in 1 string, not two
 #       will need to split string, encode/decode two strings, join strings back together when returning or printing final 
-#       encoded/decoded text
+#       encoded/decoded text --> FIXED!! (12/07/22)
 run = True
 while (run):
   
