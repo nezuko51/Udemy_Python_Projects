@@ -41,12 +41,24 @@ def subtract(n1, n2):
   return n1 - n2
 
 def divide(n1, n2):
+  """ Returns the quotient of two numbers unless zero is 
+      being divided by a number which means the function is
+      'undefined' """
   if (n1 == 0) / n2:
     return "Error: undefined"
   return n1 / n2
 
 def multiply(n1, n2):
   return n1 * n2
+
+def modulo(num1, num2):
+  """ Returns the remainder of a division operation"""
+  return num1 % num2
+
+def power(num1, num2):
+  """ Returns the first number to the power of 
+      the second number (x^y)"""
+  return num1 ** num2 
 
 def choose_op(operation, num1, num2):
   if operation == "+":
@@ -61,6 +73,12 @@ def choose_op(operation, num1, num2):
   elif operation == "/":
     quotient = divide(num1, num2)
     return quotient
+  elif operation == "%":
+    mod = modulo(num1, num2)
+    return mod
+  elif operation == "**":
+    pow = power(num1, num2)
+    return pow
   else:
     return 0
 
@@ -68,8 +86,11 @@ operation_symbols = {
   "+": add,
   "-": subtract,
   "*": multiply,
-  "/": divide
+  "/": divide, 
+  "%": modulo,
+  "**": power
 }
+
 end = False
 
 while not(end):
