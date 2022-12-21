@@ -4,18 +4,20 @@ import sys
 # Last update: 12/20/22
 
 # This short Python project is based on the Day 10 Project called the "Calculator" from the Udemy course, 100 Days of Code: The Complete Python Pro Bootcamp for 2023
-# I've taken liberty of personalizing it beyond what is shown in the course and from previous basic experience with Python through self-learning.
+# I've taken liberty of personalizing it beyond what is shown in the course and from previous basic experience with Python through self-learning. Some things were not included
+#   in the original code written for this project on Udemy. I wanted this to be a little more than what it was, so I included: modulo, power, and floor division
+# 
+# FUTURE UPDATES MAY INCLUDE: I may consider creating an option to perform a multi-step operation
 
-# The Simple Calulcator is a basic project that allows the user to run up to 3 input numbers using any kind of operation that's given in the list avaiable to the user 
-#   while running the program. The user can choose to continue running the program which will the user to input another number and a new operation. This new number and operation
-#   will use the answer from the previous inputs. If the user decides to 'start over' the console will be cleared and the program will restart, otherwise, the user can end the program.
-# Additional operations aside from given code in Udemy include: modulo and power (based on Python operators)
+# The Simple Calulcator is a basic project that focuses on returns, recursion, and modularity. It allows the user to continuously input numbers using any kind of operation that's given in the list avaiable to the user 
+#   while running the program. The user can choose to continue running the program with the current answer with a new number and operator, proceed to start a new calculation and clear the console, or simply choose 
+#   to end the program overall. 
 #   
 #   Example run: 
 #    if num1 = 7, num2 = 8 and operation = '*' ----------------> 7 * 8 = 56
-#    user = 'continue' --> num3 = 2 and new operation = '+' --> 56 + 2 = 58
+#    user = 'continue' --> num1 = answer (56), new_num = 2 and new operation = '+' --> 56 + 2 = 58
 
-############################################################################################
+###############################################################################################################
 # Global variables
 logo = """
  _____________________
@@ -47,6 +49,10 @@ def divide(n1, n2):
   if (n1 == 0) / n2:
     return "Error: undefined"
   return n1 / n2
+
+def floor(num1, num2):
+    """ Returns the rounded down number of the quotient (aka floor division)"""
+    return num1 // num2
 
 def multiply(n1, n2):
   return n1 * n2
@@ -87,40 +93,67 @@ operation_symbols = {
   "-": subtract,
   "*": multiply,
   "/": divide, 
+  "//": floor,
   "%": modulo,
   "**": power
 }
-
-end = False
-
-while not(end):
-  print(logo)
-  print("-----------------------------------")
-  num1 = int(input("Enter a number?: "))
-  num2 = int(input("Enter another number?: "))
-  print("\nList of available operations\n------------------------------")
-  for key in operation_symbols:
-    print(key)
-  operation = input("\nChoose an operation from the line above: ")
-  answer = choose_op(operation, num1, num2)
-  print(f"\nResult\n-----------\n{num1} {operation} {num2} = {answer}\n")
-
-  keep_running = input("Would you like to start over, continue, or end? Type 'continue' to continue running the current program, 'start over' re-run the program, or 'end' to stop the program: ").lower()
+def calculator():
+  end = False
+  print("\n-----------------------------------\n")
+  num1 = float(input("Enter a number?: "))
   
-  if keep_running == "end":
-    end = True
-  elif keep_running == "start over":
-    os.system('clear')
-    continue
-  elif keep_running == "continue":
-    num3 = int(input("\nWhat is the next number?: "))
+  while not(end):
+    num2 = float(input("\nEnter another number?: "))
     print("\nList of available operations\n------------------------------")
     for key in operation_symbols:
       print(key)
-    next_op = input("\nChoose another operation from the line above: ")
-    new_answer = choose_op(next_op, answer, num3)
-    print(f"\nResult\n-----------\n{answer} {next_op} {num3} = {new_answer}\n")
-  #   break
-  else:
-    print("Invalid input")
-    end = True
+    operation = input("\nChoose an operation from the line above: ")
+    answer = choose_op(operation, num1, num2)
+    print(f"\nResult\n-----------\n{num1} {operation} {num2} = {answer}\n")
+    
+    keep_running = input(f"Type 'y' to continue with the {answer}, type 's' to start over, or type 'n' to end the program: ").lower()
+    if keep_running == "y":
+      num1 = answer
+    elif keep_running == "s":
+      end = True
+      os.system('clear')
+      calculator()
+    else:
+      end = True
+###############################################################################################################
+# IGNORE THIS SECTION....THIS WAS PREVIOUS WORKING CODE BUT UPDATED CODE IS SIMPLER AND LESS REDUNDANT
+# WILL BE LEFT HERE FOR PROGRESS TRACKING 
+
+# end = False
+
+# while not(end):
+#   print(logo)
+#   print("-----------------------------------")
+#   num1 = int(input("Enter a number?: "))
+#   num2 = int(input("Enter another number?: "))
+#   print("\nList of available operations\n------------------------------")
+#   for key in operation_symbols:
+#     print(key)
+#   operation = input("\nChoose an operation from the line above: ")
+#   answer = choose_op(operation, num1, num2)
+#   print(f"\nResult\n-----------\n{num1} {operation} {num2} = {answer}\n")
+
+#   keep_running = input("Would you like to start over, continue, or end? Type 'continue' to continue running the current program, 'start over' re-run the program, or 'end' to stop the program: ").lower()
+  
+#   if keep_running == "end":
+#     end = True
+#   elif keep_running == "start over":
+#     os.system('clear')
+#     continue
+#   elif keep_running == "continue":
+#     num3 = int(input("\nWhat is the next number?: "))
+#     print("\nList of available operations\n------------------------------")
+#     for key in operation_symbols:
+#       print(key)
+#     next_op = input("\nChoose another operation from the line above: ")
+#     new_answer = choose_op(next_op, answer, num3)
+#     print(f"\nResult\n-----------\n{answer} {next_op} {num3} = {new_answer}\n")
+#   #   break
+#   else:
+#     print("Invalid input")
+#     end = True
