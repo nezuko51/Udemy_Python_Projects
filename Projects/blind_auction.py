@@ -8,9 +8,8 @@ import random
 # I've taken liberty of creating this in my own way that I know best, not so much of following the video guide for certain things (for the sake of efficiency)
 # This is the final look of a code, I wanted it to be more modular so that the important steps aren't done in a while loop
 
-# The Blind Auction is a fun, short project that allows users to switch between each other to place the highest bid. Each time a new user is added to the bidding list,
-#   the console will clear so that the next user cannot see the bid placed by the previous use
-# To make this more interesting, I've taken the liberty of having the program randomly select different items to bid for (which isnt part of the original Udemy project)
+# The Blind Auction is a fun, short project that allows users to switch between each other to place the highest bid. Each time a new user is added to the bidding list, the console will clear so that the next user cannot see the bid placed by the previous use
+# To make this more interesting, I've programmed the project to randomly select different items to bid for (which isnt part of the original Udemy project).
 
 ############################################################################################
 # Global variables
