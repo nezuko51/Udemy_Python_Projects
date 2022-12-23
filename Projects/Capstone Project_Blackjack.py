@@ -2,8 +2,8 @@
 
 # This a Udemy Capstone Project which is one of many bigger projects aside from smaller ones given throughout the Udemy course, 100 Days of Code: The Complete Python Pro Bootcamp for 2023.
 
-# The Capstone Project serves as a "benchmark" project that allows the user to apply what they have learned so far in the course. So far, the course has introduced functions, returning values from functions, while-loops, for-loops, dictionaries, lists, and nested lists/dictionaries. The caveats of the Capstone Project is that the user is given the choice to look
-# at the list of given hints (not shown here) and the number of hints is based on difficulty level. 
+# The Capstone Project serves as a "benchmark" project that allows the user to apply what they have learned so far in the course. So far, the course has introduced functions, returning values from functions, while-loops, for-loops, dictionaries, lists, and nested lists/dictionaries.
+# The caveats of the Capstone Project is that the user is given the choice to lookat the list of given hints (not shown here) and the number of hints is based on difficulty level. 
 # Below is an example of the level of difficulty given by the course. Due to previous experience with Python, I decided to hash out this whole project with only 1 hint, which is understanding the rules of Blackjack.
 
 
