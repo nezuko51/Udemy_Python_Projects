@@ -4,14 +4,13 @@ import sys
 # Last update: 12/20/22
 
 # This short Python project is based on the Day 10 Project called the "Calculator" from the Udemy course, 100 Days of Code: The Complete Python Pro Bootcamp for 2023
-# I've taken liberty of personalizing it beyond what is shown in the course and from previous basic experience with Python through self-learning. Some things were not included
-#   in the original code written for this project on Udemy. I wanted this to be a little more than what it was, so I included: modulo, power, and floor division
-# 
+# I've taken liberty of personalizing it beyond what is shown in the course and from previous basic experience with Python through self-learning. Some things were not included in the original code written for this project on Udemy.
+# I wanted this to be a little more than what it was, so I included: modulo, power, and floor division
+
 # FUTURE UPDATES MAY INCLUDE: I may consider creating an option to perform a multi-step operation
 
-# The Simple Calulcator is a basic project that focuses on returns, recursion, and modularity. It allows the user to continuously input numbers using any kind of operation that's given in the list avaiable to the user 
-#   while running the program. The user can choose to continue running the program with the current answer with a new number and operator, proceed to start a new calculation and clear the console, or simply choose 
-#   to end the program overall. 
+# The Simple Calulcator is a basic project that focuses on returns, recursion, and modularity. It allows the user to continuously input numbers using any kind of operation that's given in the list avaiable to the user while running the program.
+# The user can choose to continue running the program with the current answer with a new number and operator, proceed to start a new calculation and clear the console, or simply choose to end the program overall. 
 #   
 #   Example run: 
 #    if num1 = 7, num2 = 8 and operation = '*' ----------------> 7 * 8 = 56
