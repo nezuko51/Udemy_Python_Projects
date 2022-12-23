@@ -16,7 +16,8 @@
 #   will be asked to start a new game or quit, a new game will clear the console for sake of neatness and readability. Executing multiple new games of Blackjack crowds the console, making
 #   it difficult to keep track of the current running game.
 
-# NOTE: This program only allows user to get asked for another card once and the scores are compared for the winner after that one turn (whether user wants another card or not). 
+# NOTE: This program only allows user to get asked for another card once and the scores are compared for the winner after that one turn (whether user wants another card or not). It also
+#           does not take into account the actual probabilities of the deck of cards when a card is removed after each turn (this is advanced for me).
 
 
 
