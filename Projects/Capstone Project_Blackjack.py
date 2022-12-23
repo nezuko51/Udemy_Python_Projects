@@ -2,22 +2,18 @@
 
 # This a Udemy Capstone Project which is one of many bigger projects aside from smaller ones given throughout the Udemy course, 100 Days of Code: The Complete Python Pro Bootcamp for 2023.
 
-# The Capstone Project serves as a "benchmark" project that allows the user to apply what they have learned so far in the course. So far, the course has introduced functions, returning
-# values from functions, while-loops, for-loops, dictionaries, lists, and nested lists/dictionaries. The caveats of the Capstone Project is that the user is given the choice to look
-# at the list of given hints (not shown here) and the number of hints is based on difficulty level. Below is an example of the level of difficulty given by the course. Due to previous
-# experience with Python, I decided to hash out this whole project with only 1 hint, which is understanding the rules of Blackjack.
+# The Capstone Project serves as a "benchmark" project that allows the user to apply what they have learned so far in the course. So far, the course has introduced functions, returning values from functions, while-loops, for-loops, dictionaries, lists, and nested lists/dictionaries. The caveats of the Capstone Project is that the user is given the choice to look
+# at the list of given hints (not shown here) and the number of hints is based on difficulty level. 
+# Below is an example of the level of difficulty given by the course. Due to previous experience with Python, I decided to hash out this whole project with only 1 hint, which is understanding the rules of Blackjack.
 
 
-# Being the first Capstone Project, it is based of the game Blackjack (or also called Blackjack 21). When running the porgram, the user can choose to start a game of blackjack which
-# the opponent is the Computer. If you are not familiar, a game of Blackjack requires two cards from the deck that are randomly chosen for each the user and the Computer. While user 
-# knows both of their own cards, only ONE of the Computer's cards are shown. User must add up the sum of the values of the cards in their hand in order to decide whether or not they want
-# to get another card from the deck. The goal of the game is to stay under or be at the value of 21 to win the game. If the user is tied with the Computer, a new game must be started.
-# Otherwise, if both user and Computer have cards below 21 and user decides to pass their turn on getting another card, highest sum wins the game. When the winner is decided, the user
-# will be asked to start a new game or quit, a new game will clear the console for sake of neatness and readability. Executing multiple new games of Blackjack crowds the console, making
-# it difficult to keep track of the current running game.
+# Being the first Capstone Project, it is based of the game Blackjack (or also called Blackjack 21). When running the porgram, the user can choose to start a game of blackjack which the opponent is the Computer.
+# If you are not familiar, a game of Blackjack requires two cards from the deck that are randomly chosen for each the user and the Computer. While user knows both of their own cards, only ONE of the Computer's cards are shown. 
+# User must add up the sum of the values of the cards in their hand in order to decide whether or not they want to get another card from the deck. The goal of the game is to stay under or be at the value of 21 to win the game. 
+# If the user is tied with the Computer, a new game must be started. Otherwise, if both user and Computer have cards below 21 and user decides to pass their turn on getting another card, highest sum wins the game. When the winner is decided, the user will be asked to start a new game or quit, a new game will clear the console for sake of neatness and readability.
+# Executing multiple new games of Blackjack crowds the console, making it difficult to keep track of the current running game.
 
-# NOTE: This program only allows user to get asked for another card once and the scores are compared for the winner after that one turn (whether user wants another card or not). It also
-# does not take into account the actual probabilities of the deck of cards when a card is removed after each turn (this is advanced for me).
+# NOTE: This program only allows user to get asked for another card once and the scores are compared for the winner after that one turn (whether user wants another card or not). It also does not take into account the actual probabilities of the deck of cards when a card is removed after each turn (this is advanced for me).
 
 
 
