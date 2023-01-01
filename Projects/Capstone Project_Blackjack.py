@@ -7,7 +7,7 @@
 # Below is an example of the level of difficulty given by the course. Due to previous experience with Python, I decided to hash out this whole project with only 1 hint, which is understanding the rules of Blackjack.
 
 
-# Being the first Capstone Project, it is based of the game Blackjack (or also called Blackjack 21). When running the porgram, the user can choose to start a game of blackjack which the opponent is the Computer.
+# Being the first Capstone Project, it is based of the game Blackjack (or also called Blackjack 21). When running the program, the user can choose to start a game of blackjack which the opponent is the Computer.
 # If you are not familiar, a game of Blackjack requires two cards from the deck that are randomly chosen for each the user and the Computer. While user knows both of their own cards, only ONE of the Computer's cards are shown. 
 # User must add up the sum of the values of the cards in their hand in order to decide whether or not they want to get another card from the deck. The goal of the game is to stay under or be at the value of 21 to win the game. 
 # If the user is tied with the Computer, a new game must be started. Otherwise, if both user and Computer have cards below 21 and user decides to pass their turn on getting another card, highest sum wins the game. When the winner is decided, the user will be asked to start a new game or quit, a new game will clear the console for sake of neatness and readability.
